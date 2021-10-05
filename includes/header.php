@@ -1,7 +1,7 @@
 <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
-      <a class="navbar-brand" href="#">Chaudoudoux App</a>
+      <a class="navbar-brand" href="index.php">Chaudoudoux App</a>
     </div>
     <ul class="nav navbar-nav">
     <?php
@@ -32,4 +32,4 @@
     </ul>
   </div>
 </nav>
-<span><div id="update">MESSAGES</div></span>
+<span><div id="update"></div></span>
