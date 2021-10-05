@@ -37,12 +37,12 @@ switch ($action) {
     $signup_username = filter_var(htmlentities($_POST['username']),FILTER_SANITIZE_STRING);
     $signup_email = filter_var(htmlentities($_POST['email']),FILTER_SANITIZE_STRING);
 
-    $eunsql = "SELECT * FROM users WHERE username=:signup_username";
+    $eunsql = "SELECT * FROM cdd_users WHERE username=:signup_username";
     $exist_username = $con->prepare($eunsql);
     $exist_username->bindParam(':signup_username', $signup_username, PDO::PARAM_STR);
     $exist_username->execute();
 
-    $eemsql = "SELECT * FROM users WHERE email=:signup_email";
+    $eemsql = "SELECT * FROM cdd_users WHERE email=:signup_email";
     $exist_email = $con->prepare($eemsql);
     $exist_email->bindParam(':signup_email', $signup_email, PDO::PARAM_STR);
     $exist_email->execute();
@@ -75,7 +75,7 @@ switch ($action) {
     );
     $signup_password = password_hash($signup_password_var, PASSWORD_BCRYPT, $options);
 
-    $signupsql = "INSERT INTO users (id_user, username, email, password) VALUES (:signup_id, :signup_username, :signup_email, :signup_password)";
+    $signupsql = "INSERT INTO cdd_users (id, username, email, password) VALUES (:signup_id, :signup_username, :signup_email, :signup_password)";
     $query = $con->prepare($signupsql);
     $query->bindParam(':signup_id', $signup_id, PDO::PARAM_INT);
     $query->bindParam(':signup_username', $signup_username, PDO::PARAM_STR);
@@ -84,10 +84,10 @@ switch ($action) {
     $query->execute();
 
     // ========================== login code after signup ============================
-    $loginsql = "SELECT * FROM users WHERE email= :email AND password= :password";
+    $loginsql = "SELECT * FROM cdd_users WHERE email= :signup_email AND password= :signup_password";
     $query = $con->prepare($loginsql);
-    $query->bindParam(':email', $signup_email, PDO::PARAM_STR);
-    $query->bindParam(':password', $signup_password, PDO::PARAM_STR);
+    $query->bindParam(':signup_email', $signup_email, PDO::PARAM_STR);
+    $query->bindParam(':signup_password', $signup_password, PDO::PARAM_STR);
     $query->execute();
     $num = $query->rowCount();
 
@@ -112,7 +112,7 @@ switch ($action) {
     $email = htmlentities($_POST['lemail'], FILTER_SANITIZE_STRING);
     $password = filter_var(htmlentities($_POST['lpassword']),FILTER_SANITIZE_STRING);
 
-    $loginsql = "SELECT * FROM users WHERE email= :email";
+    $loginsql = "SELECT * FROM cdd_users WHERE email= :email";
     $query = $con->prepare($loginsql);
     $query->bindParam(':email', $email, PDO::PARAM_STR);
     $query->execute();

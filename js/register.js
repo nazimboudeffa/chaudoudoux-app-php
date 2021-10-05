@@ -1,5 +1,9 @@
 $(document).ready(function(){
   // REGISTER
+  $('#facebook').click(function(){
+    alert("Facebook n'est pas encore prit en charge");
+  })
+
   $('#registerForm').submit(function(){
     console.log("click");
 

@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "basic-php-site";
+$dbname = "bdchaudoudoux-app";
 
 try
 {
