@@ -18,20 +18,24 @@
       <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Nom">
     </div>
     <div class="form-group">
+      <label for="exampleFormControlInput1">Téléphone</label>
+      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Téléphone">
+    </div>
+    <div class="form-group">
       <label for="exampleFormControlInput1">Adresse</label>
-      <input type="text" class="form-control" id="exampleFormControlInput3" placeholder="Adresse">
+      <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Adresse">
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">Code Postal</label>
-      <input type="text" class="form-control" id="exampleFormControlInput4" placeholder="Code Postal">
+      <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Code Postal">
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">Ville</label>
-      <input type="text" class="form-control" id="exampleFormControlInput5" placeholder="Ville">
+      <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Ville">
     </div>
     <div class="form-group">
       <label for="exampleFormControlInput1">Pays</label>
-      <input type="text" class="form-control" id="exampleFormControlInput6" placeholder="Pays">
+      <input type="text" class="form-control" id="exampleFormControlInput7" placeholder="Pays">
     </div>
     <div class="form-group">
       <label for="exampleFormControlTextarea1">Observations</label>
