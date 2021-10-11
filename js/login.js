@@ -21,7 +21,7 @@ $(document).ready(function(){
           if( data.error === false){
              $('#update').html("Vous êtes maintenant connecté");
              updatefadeout();
-             window.location.href = "profile.php";
+             window.location.href = "dashboard.php";
           }
           if(data.error === true){
             $('#update').html("Erreur sur l'email ou le mot de passe");
