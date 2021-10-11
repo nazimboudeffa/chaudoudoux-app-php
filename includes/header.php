@@ -22,7 +22,14 @@
     <ul class="nav navbar-nav navbar-right">
       <?php
         if (isset($_SESSION['username'])){
-          echo '<li><a href="profile.php"><span class="glyphicon glyphicon-user"></span> Profil</a></li>';
+          echo '<li class="dropdown">
+                  <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span class="glyphicon glyphicon glyphicon-user"></span> Profil
+                  <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="profile.php">Coordonnées</a></li>
+                    <li><a href="configuration.php">Configuration</a></li>
+                  </ul>
+                </li>';
           echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>';
         } else {
           echo '<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
