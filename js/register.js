@@ -56,7 +56,7 @@ $(document).ready(function(){
               if ($("#word").length > 0){
                 return AddWord();
               } else {
-                window.location.href = "profil.php";
+                window.location.href = "profile.php";
               }
             }
             if(data.error === true){
