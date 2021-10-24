@@ -11,8 +11,13 @@ session_start();
 <body>
 
   <?php include 'includes/header.php' ?>
-
-  <?php include 'includes/content.php' ?>
+  <?php
+    if (!isset($_SESSION['username'])){
+      echo "You are not connected";
+    } else {
+      include 'forms/settings.php';
+    }
+  ?>
 
 </body>
 </html>
