@@ -27,13 +27,13 @@
                   <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="profile.php">Coordonnées</a></li>
-                    <li><a href="configuration.php">Configuration</a></li>
+                    <li><a href="configuration.php">Paramètres</a></li>
                   </ul>
                 </li>';
-          echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>';
+          echo '<li><a href="logout.php"><span class="glyphicon glyphicon-log-out"></span> Déconnexion</a></li>';
         } else {
-          echo '<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>';
-          echo '<li><a href="signin.php"><span class="glyphicon glyphicon-log-in"></span> Sign in</a></li>';
+          echo '<li><a href="signup.php"><span class="glyphicon glyphicon-user"></span> Créer un compte</a></li>';
+          echo '<li><a href="signin.php"><span class="glyphicon glyphicon-log-in"></span> Connexion</a></li>';
         }
       ?>
     </ul>
